@@ -6,6 +6,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
-        cd $GITHUB_WORKSPACE
+        cd ${{ github.workspace }}
         ls
         ./test.sh
