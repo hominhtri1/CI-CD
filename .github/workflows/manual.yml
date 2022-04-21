@@ -4,7 +4,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      #- uses: actions/checkout@v3
-      #- run: cd $GITHUB_WORKSPACE
-      #- run: ls
-      - run: nc -z -w5 13.228.244.196 22
+      - run: |
+        cd "$GITHUB_WORKSPACE"
+        ls
+        ./test.sh

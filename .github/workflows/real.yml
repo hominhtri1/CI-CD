@@ -32,4 +32,4 @@ jobs:
         run: |
           echo hello > hello.txt
           rsync hello.txt ubuntu@13.228.244.196:/home/ubuntu
-          ssh 13.228.244.196 "./test.sh"
+          ssh ubuntu@13.228.244.196 "./test.sh"
