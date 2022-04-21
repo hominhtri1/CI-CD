@@ -17,9 +17,9 @@ jobs:
       - name: Connect VPN
         run: sudo openvpn --config BusMap_DEV.ovpn --daemon
 
-      - #name: Wait for a VPN connection
-        #timeout-minutes: 1
-        #run: until nc -z -w5 13.228.244.196 22; do sleep 2; done
+      #- name: Wait for a VPN connection
+      #  timeout-minutes: 1
+      #  run: until nc -z -w5 13.228.244.196 22; do sleep 2; done
 
-      - #name: Deploy
-        #run: echo "Deploy"
+      #- name: Deploy
+      #  run: echo "Deploy"
