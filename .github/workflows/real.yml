@@ -24,8 +24,11 @@ jobs:
           mkdir -p ~/.ssh/
           echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
+          cat >> ~/.ssh/config << END
+          StrictHostKeyChecking no
+          END
 
       - name: Test
         run: |
-          ssh ubuntu@13.228.244.196
-          ls
+          echo hello > hello.txt
+          rsync hello.txt ubuntu@13.228.244.196:/home/ubuntu
