@@ -10,7 +10,8 @@ jobs:
           sudo apt-get --assume-yes install openvpn
 
       - name: Setup VPN config
-        run: cat > BusMap_DEV.ovpn << EOF
+        run: |
+          cat > BusMap_DEV.ovpn << EOF
           ${{ secrets.VPN_FILE }}
           EOF
 
